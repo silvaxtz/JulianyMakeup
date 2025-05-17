@@ -1,0 +1,190 @@
+/* Estilo global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #FDE3D4;
+    color: #3d2c2c;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+/* Cabeçalho */
+header {
+    padding: 30px 20px;
+    background-color: #FDE3D4;
+}
+
+.logo {
+    max-width: 600px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 35px;
+    color: #3d2c2c;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Roboto Slab', serif;
+}
+
+h1 i {
+    color: red;
+}
+
+/* Botão */
+.btn {
+    background-color: #926533;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 35px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #b87b7b;
+}
+
+/* Seção Sobre Mim */
+.sobre {
+    background-color: #FDE3D4;
+    padding: 60px 20px;
+    color: #3d2c2c;
+    text-align: center;
+}
+
+.conteudo-sobre {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    gap: 40px;
+}
+
+.foto-sobre {
+    width: 280px;
+    max-width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.texto-sobre {
+    max-width: 500px;
+    text-align: left;
+}
+
+.texto-sobre h2 {
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.texto-sobre p {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+/* Galeria de Fotos */
+.galeria {
+    padding: 30px 20px;
+}
+
+.galeria h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+/* Carrossel */
+.carrossel {
+    overflow: hidden;
+    max-width: 960px;
+    margin: 0 auto;
+    width: 100%;
+    position: relative;
+}
+
+.imagem-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    /* NÃO defina width fixa aqui! */
+}
+
+.imagem-container img {
+    width: 300px;
+    max-width: 100%;
+    height: 400px;
+    max-height: 80vh;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+    display: block;
+}
+
+/* Remove a margem da última imagem */
+.imagem-container img:last-child {
+    margin-right: 0;
+}
+
+/* Rodapé */
+footer {
+    background-color: #f2cccc;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* Responsividade para telas pequenas: carrossel mostra só 1 imagem inteira por vez */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 17px;
+        margin-bottom: 30px;
+    }
+    .logo {
+        max-width: 300px;
+    }
+    .btn {
+        padding: 10px 20px;
+    }
+    .conteudo-sobre {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .foto-sobre {
+        width: 200px;
+    }
+    .texto-sobre {
+        max-width: 90%;
+        padding: 0 20px;
+    }
+    .galeria h2 {
+        font-size: 20px;
+    }
+    /* Carrossel mobile */
+    .carrossel {
+        max-width: 100vw;
+        overflow: hidden;
+    }
+    .imagem-container {
+        display: flex;
+        transition: transform 0.5s;
+        /* Não coloque width aqui! */
+    }
+    .imagem-container img {
+        width: 100vw;
+        min-width: 100vw;
+        max-width: 100vw;
+        height: auto;
+        margin: 0 !important;
+        object-fit: cover;
+        border-radius: 0;
+        box-shadow: none;
+        display: block;
+    }
+}
